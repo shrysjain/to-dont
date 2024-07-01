@@ -1,9 +1,40 @@
+'use client';
+
 import { AiOutlinePlus } from 'react-icons/ai';
+import Modal from './Modal';
+import { FormEventHandler, useState } from 'react';
 
 const AddTask = () => {
+  const [modalOpen, setModalOpen] = useState<boolean>(false);
+  const [newTaskValue, setNewTaskvalue] = useState<string>('');
+
+  const handleSubmission: FormEventHandler<HTMLFormElement> = (e) => {
+    e.preventDefault();
+    console.log(newTaskValue);
+    setNewTaskvalue('')
+  }
+
   return (
   <div>
-    <button className="btn btn-primary w-full font-bold text-white">ADD ITEM <AiOutlinePlus size={18} /></button>
+    <button onClick={() => setModalOpen(true)} className="btn btn-primary w-full font-bold text-white">
+      ADD ITEM <AiOutlinePlus size={18} />
+    </button>
+
+    <Modal modalOpen={modalOpen} setModalOpen={setModalOpen}>
+      <form onSubmit={handleSubmission}>
+        <h3 className='font-bold text-lg'>Add new task</h3>
+        <div className='modal-action'>
+          <input
+            value={newTaskValue}
+            onChange={(e) => setNewTaskvalue(e.target.value)}
+            type='text'
+            placeholder='Type here'
+            className='input input-bordered w-full w-full'
+          />
+          <button type='submit' className='btn '>Submit</button>
+        </div>
+      </form>
+    </Modal>
   </div>
   );
 };
