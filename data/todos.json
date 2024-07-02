@@ -1,12 +1,16 @@
 {
   "tasks": [
     {
-      "id": "1",
+      "id": "655f95d5-111e-4667-83a8-b70d42509364",
       "text": "try to be funny"
     },
     {
-      "id": "2",
-      "text": "write a next.js app"
+      "id": "399ad95b-a633-425d-9340-bf6f388165a6",
+      "text": "get 8 hours of sleep"
+    },
+    {
+      "id": "00e98bc4-8f27-4656-8c5a-25ee1f6bd7cb",
+      "text": "forget to tell catelyn she sucks"
     }
   ]
 }

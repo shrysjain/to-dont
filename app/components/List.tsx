@@ -11,11 +11,10 @@ const List: React.FC<ListProps> = ({ tasks }) => {
     <table className="table">
       <thead>
         <tr>
-          <th>Whatever you do, DON&apos;T</th>
-          <th>Favorite Color</th>
+          <th className="text-base text-slate-200">Whatever you do, DON&apos;T</th>
         </tr>
       </thead>
-      <tbody>
+      <tbody className="text-slate-300">
         {tasks.map((task) => <Task key={task.id} task={task} />)}
       </tbody>
     </table>
