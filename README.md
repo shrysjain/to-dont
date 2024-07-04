@@ -13,7 +13,7 @@
 ## Built With
 
 - Next.js: React framework for building server-rendered applications.
-- React.: JavaScript library for building user interfaces.
+- React: JavaScript library for building user interfaces.
 - TailwindCSS: Utility-first CSS framework for styling components.
 - DaisyUI: Tailwind CSS components library for UI elements.
 - JSON Server: Full fake REST API to handle CRUD operations.
